@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- add story -->
+    <item
+        android:id="@+id/addStory"
+        android:title="Add a Story"
+        android:icon="@drawable/add_story"
+        android:showAsAction="always"
+        android:onClick="addStory"
+        tools:ignore="AppCompatResource" />
+
+    <!-- my stories -->
+    <item
+        android:id="@+id/myStories"
+        android:title="My Story"
+        android:icon="@drawable/storyicon"
+        android:showAsAction="always"
+        android:onClick="myStories"
+        tools:ignore="AppCompatResource" />
+
+</menu>

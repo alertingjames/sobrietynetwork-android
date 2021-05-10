@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "222547138972",
+    "firebase_url": "https://sobriety-cf2c1.firebaseio.com",
+    "project_id": "sobriety-cf2c1",
+    "storage_bucket": "sobriety-cf2c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222547138972:android:d49a96dbe912104f",
+        "android_client_info": {
+          "package_name": "com.sobriety.sobriety"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222547138972-qs9s2rs018f4086srhvsn5edeep2bcvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sobriety.sobriety",
+            "certificate_hash": "4dc8c4e1144feb872284bd85ced4e9265bcd25f0"
+          }
+        },
+        {
+          "client_id": "222547138972-th1565uabolb3pku18jbvp0p03jfre6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCiec2y8kJAhXJKAtsCoitfJ7UwyXsG7E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222547138972-th1565uabolb3pku18jbvp0p03jfre6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- delete member -->
+    <item
+        android:id="@+id/deleteMember"
+        android:title="Delete Member"
+        android:icon="@drawable/deleteicon"
+        android:showAsAction="always"
+        android:onClick="deleteMember"
+        tools:ignore="AppCompatResource" />
+
+    <!-- group text -->
+    <item
+        android:id="@+id/groupText"
+        android:title="Group Text"
+        android:icon="@drawable/groupmessageicon"
+        android:showAsAction="always"
+        android:onClick="groupText"
+        tools:ignore="AppCompatResource" />
+
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- create group -->
+    <item
+        android:id="@+id/createGroup"
+        android:title="New Group"
+        android:icon="@drawable/ic_new_group"
+        android:showAsAction="always"
+        android:onClick="createGroup"
+        tools:ignore="AppCompatResource" />
+
+    <!-- my group -->
+    <item
+        android:id="@+id/myGroup"
+        android:title="My Groups"
+        android:icon="@drawable/ic_my_group"
+        android:showAsAction="always"
+        android:onClick="myGroups"
+        tools:ignore="AppCompatResource" />
+
+    <!-- join group -->
+    <item
+        android:id="@+id/joinGroup"
+        android:title="Join Group"
+        android:icon="@drawable/join_group"
+        android:showAsAction="always"
+        android:onClick="joinGroup"
+        tools:ignore="AppCompatResource" />
+
+</menu>

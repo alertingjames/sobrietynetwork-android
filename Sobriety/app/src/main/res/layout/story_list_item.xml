@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="Story Title"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/user"
+            android:visibility="visible"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:padding="6dp"
+            android:gravity="center"
+            android:text="Story User"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@drawable/videomark"
+                android:id="@+id/videomark"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/audio_play"
+                android:id="@+id/audiomark"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/datetime"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"
+                android:textSize="12sp"
+                android:text="7/25/2018"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp">
+        <ImageView
+            android:id="@+id/videothumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:src="@drawable/profilephoto"/>
+        <ImageView
+            android:id="@+id/audio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/voiceicon"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/right_arrow_gray"/>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_add_video_story_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.AddVideoStoryActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                style="@style/ToolBarWithNavigationBack"
+                android:layout_width="match_parent"
+                android:background="#03a8e1">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:text="Add Video Story"
+                        android:drawableLeft="@drawable/videoicon"
+                        android:drawablePadding="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:padding="3dp"
+                        />
+                </FrameLayout>
+            </android.support.v7.widget.Toolbar>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_blue">
+                <RelativeLayout
+                    android:id="@+id/lytvideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <VideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/videoView"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="50dp"
+                        android:scrollbarThumbVertical="@anim/space"
+                        android:layout_gravity="center" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="previewVideo"
+                        android:src="@drawable/videopreview"
+                        android:background="@drawable/circle_shadow"/>
+                    <ImageButton
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:onClick="submitVideo"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/shareicon"
+                        android:background="@drawable/circle_shadow"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/compressionMsg"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/progressBar"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Compressing the video ..."
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#97000000">
+    </View>
+    <FrameLayout
+        android:id="@+id/nameBox"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/white_fill_rect"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/blue_nav_round"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="40dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/videoicon"/>
+            <TextView
+                android:id="@+id/boxTitle"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:text="Add Video Story"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="#fff">
+                <EditText
+                    android:id="@+id/inputBox"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="300dp"
+                    android:imeOptions="actionNext"
+                    android:gravity="start"
+                    android:hint="Enter video title"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:padding="8dp"/>
+                <TextView
+                    android:id="@+id/send_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom"
+                    android:paddingBottom="8dp"
+                    android:drawableRight="@android:drawable/ic_menu_send"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                android:text="Close"/>
+        </LinearLayout>
+    </FrameLayout>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:id="@+id/lyt_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:visibility="gone"
+        android:background="#fff">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video file uploading..."
+            android:textSize="13dp"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/txtPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:textColor="#4e5572"
+            android:textSize="25dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:progressTint="#ff0246"
+            android:visibility="visible"/>
+    </LinearLayout>
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

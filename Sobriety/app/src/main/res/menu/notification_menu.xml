@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- call requests -->
+    <item
+        android:id="@+id/callRequests"
+        android:title="Call Requests"
+        android:icon="@drawable/phonecallicon"
+        android:showAsAction="always"
+        android:onClick="callRequests"
+        tools:ignore="AppCompatResource" />
+
+    <!-- history -->
+    <item
+        android:id="@+id/history"
+        android:title="History"
+        android:showAsAction="always"
+        android:icon="@drawable/messagehistoryicon"
+        android:onClick="notifications"
+        tools:ignore="AppCompatResource" />
+
+</menu>

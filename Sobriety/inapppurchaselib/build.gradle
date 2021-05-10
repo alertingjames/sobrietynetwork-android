@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+//    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+    buildTypes {
+    }
+}
+
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'inapppurchase'
+    publishedGroupId = 'com.vivek.inapppurchase'
+    libraryName = 'InAppPurchaseLib'
+    artifact = 'inapppurchase'
+    libraryDescription = 'InAppPurchase Library is an android in-app purchase library though with, we can purchase the Product on the Google Play. We can also implement the subscription for the recurring purchase.'
+    siteUrl = 'https://github.com/VivekKumarApps/InAppPurchaseDemo'
+    gitUrl = 'https://github.com/VivekKumarApps/InAppPurchaseDemo.git'
+    libraryVersion = '1.0.0'
+    developerId = 'VivekKumarApps'
+    developerName = 'Vivek Kumar'
+    developerEmail = 'vivekkumarits@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = [ "Apache-2.0" ]
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

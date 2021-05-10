@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sobriety</string>
+    <string name="agora_app_id">b88afab4574549e185bb77fa629efc12</string>
+
+    <string name="FCM_PREF">fcm_pref</string>
+    <string name="FCM_TOKEN">fcm_token</string>
+</resources>

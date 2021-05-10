@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.sobriety.sobriety.main.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/navbarbackground" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="The Sobriety"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="Network"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Forgot Code"
+                android:textColor="#03a8e1"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Please enter your phone number. We will send you SMS for your code."
+                android:textColor="#5b5b5b"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/blue_stroke_white_background_round"
+                android:orientation="horizontal">
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:ccp_defaultNameCode="US"
+                    app:ccp_textSize="12sp"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+                <EditText
+                    android:id="@+id/inputBox"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColorHint="#bfbfbf"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:imeOptions="actionSend"
+                    android:hint="Phone Number"
+                    android:background="@null"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:background="@drawable/blue_stroke_white_background_round"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="0.2"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/phoneicon"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+                <EditText
+                    android:id="@+id/codeBox"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColorHint="#bfbfbf"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:hint="Your Verification Code"
+                    android:imeOptions="actionSend"
+                    android:background="@null"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right|bottom"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:onClick="requestCode"
+                android:background="@drawable/blue_round"
+                tools:ignore="OnClick">
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/rightarrow"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</FrameLayout>

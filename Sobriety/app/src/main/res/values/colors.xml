@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a8e1</color>
+    <color name="colorPrimaryDark">#03a8e1</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gray">#c2c1c0</color>
+
+    <array name="material_colors_marker">
+        <item name="red" type="color">#ff2d6f</item>
+        <item name="purple" type="color">#aa00ff</item>
+        <item name="green" type="color">#14e715</item>
+        <item name="indigo" type="color">#3d5afe</item>
+        <item name="light_blue" type="color">#00b0ff</item>
+        <item name="green2" type="color">#2baf2b</item>
+        <item name="yellow" type="color">#f9a825</item>
+        <item name="purple2" type="color">#d500f9</item>
+        <item name="cyan" type="color">#00e5ff</item>
+        <item name="amber" type="color">#ffc107</item>
+    </array>
+</resources>

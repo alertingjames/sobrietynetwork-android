@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- invite member -->
+    <item
+        android:id="@+id/inviteMember"
+        android:title="Invite to Network"
+        android:icon="@drawable/inviteicon"
+        android:showAsAction="always"
+        android:onClick="inviteMember"
+        tools:ignore="AppCompatResource" />
+
+    <!-- invite someone -->
+    <item
+        android:id="@+id/inviteSomeone"
+        android:title="Invite Someone"
+        android:icon="@drawable/invitesomeoneicon"
+        android:showAsAction="always"
+        android:onClick="inviteSomeone"
+        tools:ignore="AppCompatResource" />
+
+    <!-- networks -->
+    <item
+        android:id="@+id/networks"
+        android:title="Networks"
+        android:icon="@drawable/network"
+        android:showAsAction="always"
+        android:onClick="networks"
+        android:visible="false"
+        tools:ignore="AppCompatResource" />
+
+</menu>

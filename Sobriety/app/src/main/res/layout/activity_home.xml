@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_home_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.HomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:background="#03a8e1">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:text="Home"
+                        android:layout_gravity="center_vertical"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:padding="3dp"
+                        />
+                    <FrameLayout
+                        android:id="@+id/notiButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="8dp">
+                        <com.cunoraz.gifview.library.GifView
+                            android:id="@+id/animNoticon"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_marginRight="8dp"
+                            android:visibility="gone"
+                            custom:gif="@drawable/notigif"/>
+                        <ImageView
+                            android:id="@+id/whiteNoticon"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="10dp"
+                            android:visibility="visible"
+                            android:src="@drawable/notificationicon"/>
+                    </FrameLayout>
+                </FrameLayout>
+            </android.support.v7.widget.Toolbar>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp">
+                    <FrameLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:src="@drawable/profilephoto"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="#03a8e1"/>
+                        <ImageView
+                            android:id="@+id/avaible"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="right|bottom"
+                            android:src="@drawable/ic_available"/>
+                        <ImageView
+                            android:id="@+id/disturb"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:visibility="gone"
+                            android:layout_gravity="right|bottom"
+                            android:src="@drawable/disturbicon"/>
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Tereza S."
+                        android:textSize="22sp"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="50dp"
+                        android:background="@drawable/white_fill_round"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/nearestText"
+                            android:layout_width="0px"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Call The Nearest Addict/Alcoholic"
+                            android:textSize="14sp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:textColor="#646464"/>
+                        <ImageButton
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@null"
+                            android:onClick="nearestCall"
+                            android:src="@drawable/ic_phone_call"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="2dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Or"
+                        android:textColor="#646464"
+                        android:padding="12dp"
+                        android:gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/white_fill_round"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/randomText"
+                            android:layout_width="0px"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Call Random Addict/Alcoholic"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="16dp"
+                            android:textSize="14sp"
+                            android:textColor="#646464"/>
+                        <ImageButton
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@null"
+                            android:onClick="randomCall"
+                            android:src="@drawable/ic_phone_call"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="2dp"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="If you are interested in getting supported this app, you should donate"
+                        android:textColor="#646464"
+                        android:layout_marginTop="20dp"
+                        android:padding="15dp"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                    <LinearLayout
+                        android:id="@+id/donateButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:onClick="gotoDonate"
+                        android:background="@drawable/blue_round">
+                        <TextView
+                            android:id="@+id/buttonText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="16sp"
+                            android:drawableLeft="@drawable/ic_donate"
+                            android:drawablePadding="10dp"
+                            android:text="Donate"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/caption2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="To learn more about the app, please visit www.thesobrietynetwork.com"
+                        android:autoLink="web"
+                        android:textColor="#646464"
+                        android:padding="15dp"
+                        android:gravity="center"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            layout="@layout/footer" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
