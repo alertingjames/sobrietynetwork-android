@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FieldSetView/FieldSetView.iml" filepath="$PROJECT_DIR$/FieldSetView/FieldSetView.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sobriety.iml" filepath="$PROJECT_DIR$/Sobriety.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/inapppurchaselib/inapppurchaselib.iml" filepath="$PROJECT_DIR$/inapppurchaselib/inapppurchaselib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FieldSetView/Sobriety.FieldSetView.iml" filepath="$PROJECT_DIR$/.idea/modules/FieldSetView/Sobriety.FieldSetView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Sobriety.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Sobriety.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/inapppurchaselib/Sobriety.inapppurchaselib.iml" filepath="$PROJECT_DIR$/.idea/modules/inapppurchaselib/Sobriety.inapppurchaselib.iml" />
     </modules>
   </component>
 </project>
